@@ -16,14 +16,15 @@
           </ul>
           <div class="tab-content profile-data">
             <div class="tab-pane active" id="portlet_tab1">
+              <div class="row">
               <div class="col-md-3">
-                 <div class="div_links heading refine" data-id="prob-1">Basic Information</div>
-                 <div class="div_links heading refine" data-id="prob-2">Religion Information</div>
-                 <div class="div_links heading refine" data-id="prob-3">Physical Appearance</div>
-                 <div class="div_links heading refine" data-id="prob-4">Education and Work</div>                 
-                 <div class="div_links heading refine" data-id="prob-5">Family Information</div>
-                 <div class="div_links heading refine" data-id="prob-6">Lifestyle and Interests</div>
-              </div>
+                <div class="div_links heading refine" data-id="prob-1">Basic Information</div>
+                <div class="div_links heading refine" data-id="prob-2">Religion Information</div>
+                <div class="div_links heading refine" data-id="prob-3">Physical Appearance</div>
+                <div class="div_links heading refine" data-id="prob-4">Education and Work</div>                 
+                <div class="div_links heading refine" data-id="prob-5">Family Information</div>
+                <div class="div_links heading refine" data-id="prob-6">Lifestyle and Interests</div>
+              </div>              
               <div class="col-md-9" style="border: 1px solid #F2EFEF;">
                 <div id="prob-1" class="div_form"  @if(Session::has('tab')) style="display:none" @endif>
                   <div class="portlet light">
@@ -34,7 +35,7 @@
                             <div class="form-group col-md-6">
                               <label>Name</label>
                                 {{Form::text('first_name',$user->first_name,array("class"=>"form-control", "placeholder"=>"first_name"))}}
-                                <span>{{$errors->first('first_name','Please provide your name')}}</span> 
+                              <span>{{$errors->first('first_name','Please provide your name')}}</span> 
                             </div>                         
                             <div class="form-group col-md-6 ">
                               <label>D.O.B</label>
@@ -51,9 +52,9 @@
                               </div>
                             </div>
                             <div class="form-group col-md-6">
-                               {{ Form::label('', 'Marital Status') }}                                     
-                               {{Form::select('marital_status',array("0"=>"Select","1"=>"Married","2"=>"UnMarried"),$user->marital_status,array("class"=>"form-control"))}}
-                               <span>{{$errors->first('marital_status')}}</span>
+                              {{ Form::label('', 'Marital Status') }}                                     
+                              {{Form::select('marital_status',array("0"=>"Select","1"=>"Married","2"=>"UnMarried"),$user->marital_status,array("class"=>"form-control"))}}
+                              <span>{{$errors->first('marital_status')}}</span>
                             </div>                           
                             <div class="form-group col-md-6">
                               <label>Country of residence</label> 
@@ -68,8 +69,8 @@
                               {{Form::select('city_id',$cities,$user->city_id,array("class"=>"form-control"))}}            
                             </div>
                             <div class="form-group col-md-12">
-                                <label>About Me</label> 
-                                 {{ Form::textarea('about_me',$userparam->about_me,["class"=>"form-control textarea"])}}  
+                              <label>About Me</label> 
+                              {{ Form::textarea('about_me',$userparam->about_me,["class"=>"form-control textarea"])}}  
                             </div>                          
                             <div class="form-group col-md-12 subbutton">
                               <button type="submit" class="btn default">Submit</button>
@@ -77,155 +78,148 @@
                           {{Form::close()}}
                         </div>
                       </div>                      
-                      </div>
-                    </div>            
-                  </div>
-                  <div id="prob-2" class="div_form" @if(Session::get('tab') != 2) style="display:none" @endif>
+                    </div>
+                  </div>            
+                </div>
+                <div id="prob-2" class="div_form" @if(Session::get('tab') != 2) style="display:none" @endif>
                   <div class="portlet light">
                     <div class="portlet-body form">
                       <div class="row">
-                       <div class="col-md-12">
-                        {{Form::open(array("url"=>"/religioninfo","method" => "PUT","id"=>"builderForm","files"=>"true"))}}                                             
+                        <div class="col-md-12">
+                          {{Form::open(array("url"=>"/religioninfo","method" => "PUT","id"=>"builderForm","files"=>"true"))}}                                             
                             <div class="form-group col-md-6">
-                               {{ Form::label('', 'Religion') }}                                     
-                               {{Form::select('religion_id',$religions,$user->religion_id,array("class"=>"form-control"))}}
-                               <span>{{$errors->first('religion')}}</span>
+                              {{ Form::label('', 'Religion') }}                                     
+                              {{Form::select('religion_id',$religions,$user->religion_id,array("class"=>"form-control"))}}
+                              <span>{{$errors->first('religion')}}</span>
                             </div>                         
-                          <div class="form-group col-md-6">
-                            <label>Tribe</label> 
-                            {{Form::select('tribe_id',$tribes,$user->tribe_id,array("class"=>"form-control"))}}             
-                          </div>                                                                                                  
-                          <div class="form-group col-md-12 subbutton">
-                            <button type="submit" class="btn default">Submit</button>
-                        </div>
+                            <div class="form-group col-md-6">
+                              <label>Tribe</label> 
+                              {{Form::select('tribe_id',$tribes,$user->tribe_id,array("class"=>"form-control"))}}             
+                            </div>                                                                                                  
+                            <div class="form-group col-md-12 subbutton">
+                              <button type="submit" class="btn default">Submit</button>
+                            </div>
                           {{Form::close()}}
                         </div>
                       </div>                      
-                      </div>
-                    </div>            
-                  </div>
-
-
-                  <div id="prob-3" class="div_form" @if(Session::get('tab') != 3) style="display:none" @endif>
+                    </div>
+                  </div>            
+                </div>
+                <div id="prob-3" class="div_form" @if(Session::get('tab') != 3) style="display:none" @endif>
                   <div class="portlet light">
                     <div class="portlet-body form">
                       <div class="row">
-                       <div class="col-md-12">
-                        {{Form::open(array("url"=>"/physicalinfo","method" => "PUT","id"=>"builderForm","files"=>"true"))}}  
-                          <div class="form-group col-md-6">
-                            <label>Weight</label>
+                        <div class="col-md-12">
+                          {{Form::open(array("url"=>"/physicalinfo","method" => "PUT","id"=>"builderForm","files"=>"true"))}}  
+                            <div class="form-group col-md-6">
+                              <label>Weight</label>
                               {{Form::text('weight',$userparam->weight,array("class"=>"form-control", "placeholder"=>"Weight"))}}
                               <span>{{$errors->first('weight','Please provide your weight')}}</span> 
-                          </div>                       
+                            </div>                       
                             <div class="form-group col-md-6">
-                               {{ Form::label('', 'Complexion') }}                                     
-                               {{Form::select('complexion_id',$complexions,$user->complexion_id,array("class"=>"form-control"))}}
-                               <span>{{$errors->first('complexion_id','Please provide your Comlplexion')}}</span>
+                              {{ Form::label('', 'Complexion') }}                                     
+                              {{Form::select('complexion_id',$complexions,$user->complexion_id,array("class"=>"form-control"))}}
+                              <span>{{$errors->first('complexion_id','Please provide your Comlplexion')}}</span>
                             </div>                         
-                          <div class="form-group col-md-6">
-                            <label>Body Type</label> 
-                            {{Form::select('body_type_id',$body_types,$user->body_type_id,array("class"=>"form-control"))}}             
-                          </div>
-                          <div class="form-group col-md-6">
-                            <label>Height</label> 
-                            {{Form::select('height',array(""=>"Select","1"=>"4ft 5in","2"=>"5ft","3"=>"5ft 5in"),$userparam->height,array("class"=>"form-control"))}}            
-                          </div>
-                           <div class="form-group col-md-6">
-                            <label>Special Case</label> 
-                            {{Form::select('special_case',array(""=>"None","1"=>"Doesn't Matter","2"=>"Hiv Positive","3"=>"Physically Challenged from birth"),$userparam->special_case,array("class"=>"form-control"))}}            
-                          </div>                                                 
-                          <div class="form-group col-md-12 subbutton">
-                            <button type="submit" class="btn default">Submit</button>
-                        </div>
+                            <div class="form-group col-md-6">
+                              <label>Body Type</label> 
+                              {{Form::select('body_type_id',$body_types,$user->body_type_id,array("class"=>"form-control"))}}             
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label>Height</label> 
+                              {{Form::select('height',array(""=>"Select","1"=>"4ft 5in","2"=>"5ft","3"=>"5ft 5in"),$userparam->height,array("class"=>"form-control"))}}            
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label>Special Case</label> 
+                              {{Form::select('special_case',array(""=>"None","1"=>"Doesn't Matter","2"=>"Hiv Positive","3"=>"Physically Challenged from birth"),$userparam->special_case,array("class"=>"form-control"))}}            
+                            </div>                                                 
+                            <div class="form-group col-md-12 subbutton">
+                              <button type="submit" class="btn default">Submit</button>
+                            </div>
                           {{Form::close()}}
                         </div>
                       </div>                      
-                      </div>
-                    </div>            
-                  </div>
-                  <div id="prob-4" class="div_form" @if(Session::get('tab') != 4) style="display:none" @endif>
+                    </div>
+                  </div>            
+                </div>
+                <div id="prob-4" class="div_form" @if(Session::get('tab') != 4) style="display:none" @endif>
                   <div class="portlet light">
                     <div class="portlet-body form">
                       <div class="row">
-                       <div class="col-md-12">
-                        {{Form::open(array("url"=>"/educationinfo","method" => "PUT","id"=>"builderForm","files"=>"true"))}}                                           
-                                                 
-                          <div class="form-group col-md-6">
-                            <label>Education</label> 
-                            {{Form::select('education_id',$educations,$user->education_id,array("class"=>"form-control"))}}             
-                          </div>
-                          
-                           <div class="form-group col-md-6">
-                               {{ Form::label('', 'Occupation') }}                                     
-                               {{Form::select('occupation',array("0"=>"Select","1"=>"Admin","2"=>"Agriculture"),$userparam->occupation,array("class"=>"form-control"))}}
-                               <span>{{$errors->first('occupation')}}</span>
-                            </div>   
-                              
-                           <div class="form-group col-md-6">
-                            <label>Company Name</label>
+                        <div class="col-md-12">
+                          {{Form::open(array("url"=>"/educationinfo","method" => "PUT","id"=>"builderForm","files"=>"true"))}}                                           
+                            <div class="form-group col-md-6">
+                              <label>Education</label> 
+                              {{Form::select('education_id',$educations,$user->education_id,array("class"=>"form-control"))}}             
+                            </div>                          
+                            <div class="form-group col-md-6">
+                              {{ Form::label('', 'Occupation') }}                                     
+                              {{Form::select('occupation',array("0"=>"Select","1"=>"Admin","2"=>"Agriculture"),$userparam->occupation,array("class"=>"form-control"))}}
+                              <span>{{$errors->first('occupation')}}</span>
+                            </div>                           
+                            <div class="form-group col-md-6">
+                              <label>Company Name</label>
                               {{Form::text('company_name',$userparam->company_name,array("class"=>"form-control", "placeholder"=>"Company Name"))}}
                               <span>{{$errors->first('company_name','Please provide your first Company Name')}}</span> 
-                          </div> 
-                          <div class="form-group col-md-6">
-                            <label>Annual Income</label> 
-                            {{Form::text('annual_income',$userparam->annual_income,array("class"=>"form-control", "placeholder"=>"Annual Income"))}}            
-                          </div>
-                          <div class="form-group col-md-6">
-                            <label>Experience</label> 
-                            {{Form::text('experience',$userparam->experience,array("class"=>"form-control", "placeholder"=>"Experience"))}}                                        
-                          </div>                                                   
-                          <div class="form-group col-md-12 subbutton">
-                            <button type="submit" class="btn default">Submit</button>
-                        </div>
-                          {{Form::close()}}
-                        </div>
-                      </div>                      
-                      </div>
-                    </div>            
-                  </div>
-   
-                  <div id="prob-5" class="div_form" @if(Session::get('tab') != 5) style="display:none" @endif>
-                  <div class="portlet light">
-                    <div class="portlet-body form">
-                      <div class="row">
-                       <div class="col-md-12">
-                        {{Form::open(array("url"=>"/familyinfo","method" => "PUT","id"=>"builderForm","files"=>"true"))}}                                                  
+                            </div> 
                             <div class="form-group col-md-6">
-                               <label>Father's Occupation</label>                                    
-                               {{Form::select('f_occupation',array("0"=>"Select","1"=>"Business","2"=>"Service"),$userparam->f_occupation,array("class"=>"form-control"))}}
-                               <span>{{$errors->first('religion')}}</span>
-                            </div>                         
-                          <div class="form-group col-md-6">
-                            <label>Mother's Occupation'</label> 
-                            {{Form::select('m_occupation',array(""=>"Select","1"=>"Housewife","2"=>"Business","3"=>"Service"),$userparam->m_occupation,array("class"=>"form-control"))}}             
-                          </div>
-                          <div class="form-group col-md-6">
-                            <label>Brothers</label> 
-                            {{Form::select('brother',array(""=>"0","1"=>"1","2"=>"2","3"=>"3"),$userparam->brother,array("class"=>"form-control"))}}                            
-                          </div>
-                           <div class="form-group col-md-6">
-                            <label>Sisters</label> 
-                             {{Form::select('sister',array(""=>"0","1"=>"1","2"=>"2","3"=>"3"),$userparam->sister,array("class"=>"form-control"))}}                                    
-                          </div>                          
-                          <div class="form-group col-md-12">
-                              <label>About Family</label> 
-                               {{ Form::textarea('about_family',$userparam->about_family,["class"=>"form-control textarea"])}}  
-                          </div> 
-
-                          <div class="form-group col-md-12 subbutton">
-                            <button type="submit" class="btn default">Submit</button>
-                        </div>
+                              <label>Annual Income</label> 
+                              {{Form::text('annual_income',$userparam->annual_income,array("class"=>"form-control", "placeholder"=>"Annual Income"))}}            
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label>Experience</label> 
+                              {{Form::text('experience',$userparam->experience,array("class"=>"form-control", "placeholder"=>"Experience"))}}                                        
+                            </div>                                                   
+                            <div class="form-group col-md-12 subbutton">
+                              <button type="submit" class="btn default">Submit</button>
+                            </div>
                           {{Form::close()}}
                         </div>
                       </div>                      
-                      </div>
-                    </div>            
-                  </div>
-                  <div id="prob-6" class="div_form" @if(Session::get('tab') != 6) style="display:none" @endif>
+                    </div>
+                  </div>            
+                </div>   
+                <div id="prob-5" class="div_form" @if(Session::get('tab') != 5) style="display:none" @endif>
                   <div class="portlet light">
                     <div class="portlet-body form">
                       <div class="row">
-                       <div class="col-md-12">
+                        <div class="col-md-12">
+                          {{Form::open(array("url"=>"/familyinfo","method" => "PUT","id"=>"builderForm","files"=>"true"))}}                                                  
+                            <div class="form-group col-md-6">
+                              <label>Father's Occupation</label>                                    
+                              {{Form::select('f_occupation',array("0"=>"Select","1"=>"Business","2"=>"Service"),$userparam->f_occupation,array("class"=>"form-control"))}}
+                              <span>{{$errors->first('religion')}}</span>
+                            </div>                         
+                            <div class="form-group col-md-6">
+                              <label>Mother's Occupation'</label> 
+                              {{Form::select('m_occupation',array(""=>"Select","1"=>"Housewife","2"=>"Business","3"=>"Service"),$userparam->m_occupation,array("class"=>"form-control"))}}             
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label>Brothers</label> 
+                              {{Form::select('brother',array(""=>"0","1"=>"1","2"=>"2","3"=>"3"),$userparam->brother,array("class"=>"form-control"))}}                            
+                            </div>
+                            <div class="form-group col-md-6">
+                            <label>Sisters</label> 
+                              {{Form::select('sister',array(""=>"0","1"=>"1","2"=>"2","3"=>"3"),$userparam->sister,array("class"=>"form-control"))}}                                    
+                            </div>                          
+                            <div class="form-group col-md-12">
+                              <label>About Family</label> 
+                              {{ Form::textarea('about_family',$userparam->about_family,["class"=>"form-control textarea"])}}  
+                            </div>
+                            <div class="form-group col-md-12 subbutton">
+                              <button type="submit" class="btn default">Submit</button>
+                            </div>
+                          {{Form::close()}}
+                        </div>
+                      </div>                      
+                    </div>
+                  </div>            
+                </div>
+                <div id="prob-6" class="div_form" @if(Session::get('tab') != 6) style="display:none" @endif>
+                  <div class="portlet light">
+                    <div class="portlet-body form">
+                      <div class="row">
+                        <div class="col-md-12">
                         {{Form::open(array("url"=>"/lifestyleinfo","method" => "PUT","id"=>"builderForm","files"=>"true"))}}  
                           <div class="form-group  col-md-6">
                             <label>Smoking</label>
@@ -251,7 +245,7 @@
                           </div>                     
                           <div class="form-group col-md-6">
                             <label>Eating Habits</label>                                    
-                             {{Form::select('eating_habit',array("0"=>"Select","1"=>"Jain","2"=>"Vegetarian","2"=>"Non-Vegetarian"),$userparam->eating_habit,array("class"=>"form-control"))}}
+                            {{Form::select('eating_habit',array("0"=>"Select","1"=>"Jain","2"=>"Vegetarian","2"=>"Non-Vegetarian"),$userparam->eating_habit,array("class"=>"form-control"))}}
                             <span>{{$errors->first('eating_habit')}}</span>
                           </div>                         
                           <div class="form-group col-md-6">
@@ -262,7 +256,7 @@
                             <label>Favourite Artist(s)</label> 
                             {{Form::text('favourite_artist',$userparam->favourite_artist,array("class"=>"form-control", "placeholder"=>"Favourite Artist"))}}            
                           </div>
-                           <div class="form-group col-md-6">
+                          <div class="form-group col-md-6">
                             <label>Favourite Song(s)</label> 
                             {{Form::text('favourite_song',$userparam->favourite_song,array("class"=>"form-control", "placeholder"=>"Favourite Song"))}}           
                           </div>                          
@@ -272,27 +266,27 @@
                           </div>
                           <div class="form-group col-md-6">
                             <label>Favourite Destination(s)</label> 
-                             {{Form::text('favourite_destination',$userparam->favourite_destination,array("class"=>"form-control", "placeholder"=>"Favourite Destination"))}}    
+                            {{Form::text('favourite_destination',$userparam->favourite_destination,array("class"=>"form-control", "placeholder"=>"Favourite Destination"))}}    
                           </div>
                           <div class="form-group col-md-6">
                             <label>Favourite Book(s)</label> 
-                             {{Form::text('favourite_book',$userparam->favourite_book,array("class"=>"form-control", "placeholder"=>"Favourite Book"))}}          
+                            {{Form::text('favourite_book',$userparam->favourite_book,array("class"=>"form-control", "placeholder"=>"Favourite Book"))}}          
                           </div>
                           <div class="form-group col-md-6">
                             <label>Favourite Auther(s)</label> 
-                             {{Form::text('favourite_auther',$userparam->favourite_auther,array("class"=>"form-control", "placeholder"=>"Favourite Auther"))}}            
-                          </div>                          
-                          
+                            {{Form::text('favourite_auther',$userparam->favourite_auther,array("class"=>"form-control", "placeholder"=>"Favourite Auther"))}}            
+                          </div>                  
                           <div class="form-group col-md-12 subbutton">
                             <button type="submit" class="btn default">Submit</button>
-                        </div>
-                          {{Form::close()}}
+                          </div>
+                        {{Form::close()}}
                         </div>
                       </div>                      
                       </div>
                     </div>            
                   </div>
               </div>
+            </div>
             </div>
             <div class="tab-pane" id="portlet_tab2">
               <div class="col-md-3">

@@ -162,7 +162,7 @@
                             </div>
                              <div class="col-md-12">
                               <div class="col-md-6">Eating Habits</div>
-                              <div class="col-md-6">{{$userparam->eating_habit}}</div>
+                              <div class="col-md-6">{{$eating_habit_values[$userparam->eating_habit]}}</div>
                             </div> 
                           </div>
                         </p>

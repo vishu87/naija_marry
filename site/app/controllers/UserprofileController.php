@@ -217,13 +217,15 @@ class UserprofileController extends BaseController {
            $marital_status_values = array("","Married","UnMarried");
            $special_case_values = array("","Doesn't Matter","Hiv Positive","Physically Challenged from birth");
            $occupation_values = array("","Admin","Agriculture");
+           $eating_habit_values = array("","Jain","Vegetarian","Non-Vegetarian");
             $userparam = UserParam::where('user_id',$id)->first();
         $this->layout->main =  View::make('frontend.profile.userprofile',array(
             "user" => $user,
             "userparam" => $userparam,
             "marital_status_values" => $marital_status_values,
             "special_case_values" => $special_case_values,
-            "occupation_values" => $occupation_values
+            "occupation_values" => $occupation_values,
+            "eating_habit_values"=> $eating_habit_values
         ));          
     }
       
