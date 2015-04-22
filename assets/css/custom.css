@@ -1,0 +1,381 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.heading{
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+}
+.top-header{
+  background: #56C8C1;
+}
+
+.home-slider{
+  background: #eeeeee;
+  
+}
+
+.middle-image{
+  height: 600px;
+  background: url('../img/new-sm-img1.jpg') no-repeat bottom center;
+}
+
+.home-search{
+  margin-top:40%;
+}
+
+.light-red{
+  background: rgba(181,29,34,0.9);
+  opacity: 0.9;
+  color:#fff;
+  padding:10px;
+  min-height: 84px;
+}
+.dark-grey{
+  background: rgba(50,50,50,0.9);
+  color:#fff;
+  padding:10px;
+  min-height: 84px;
+}
+.clear{
+  clear: both;
+}
+.search-div{
+  text-align:left; 
+  float:left;
+  padding: 0 10px;
+  border-right: 1px solid #3c3c3c;
+  border-left: 1px solid #262626;
+}
+
+.search-div-last{
+  border-right: 0;
+}
+.search-div-first{
+  border-left: 0;
+}
+
+.search-div input, .search-div select{
+  color:#000;
+  font-size: 14px;
+  padding: 5px;
+}
+.btn-home-search{
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px auto auto 20px;
+}
+
+.home-middle{
+  padding: 10px 0;
+  font-size: 14px;
+}
+p{
+  font-size: 14px;
+  
+}
+
+.reg-btn{
+  font-size: 25px;
+}
+.textright{
+  text-align: right;
+}
+p.font-small{
+  font-size: 12px;
+}
+
+.home-listing{
+  padding: 10px 0;
+}
+
+
+footer {
+  background-color: #eee;
+  color: #000;
+  font-size: 15px;
+  padding: 0;
+}
+footer a {
+  color: #9aa4af;
+  font-weight: 700;
+}
+footer p {
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.footer-title {
+  margin: 0 0 22px;
+  padding-top: 21px;
+  font-size: 24px;
+  line-height: 40px;
+  color: #1abc9c;
+}
+
+footer .col-md-2 ul {
+  list-style-type: none;
+  margin: 0 0 26px;
+  padding: 0;
+}
+footer .col-md-2 ul li {
+  border-top: 1px solid #ccc;
+  line-height: 19px;
+  padding: 6px 0;
+}
+footer .col-md-2 ul li:first-child {
+  border-top: none;
+  padding-top: 1px;
+}
+
+.btn-login{
+  margin: 5px 0 5px 0;
+  background-color: #1F6D79;
+}
+.btn-register{
+  margin: 5px 0 5px 0;
+  background-color: #C04548;
+}
+
+.div_links{
+  background-color:#45B6AF; 
+  padding:5px 5px 5px 10px; 
+  color: #fff; font-size: 
+  medium; border: 1px solid #33C2B1; 
+  cursor:pointer;
+  margin-top: 1px;
+}
+
+.tab_link{
+  border-radius: 0px;
+}
+.subbutton{
+  text-align: center;
+  margin-top: 30px;
+}
+
+/**************Profile Page*******/
+.profile-image{
+  width: 100%;
+  border: 2px solid #EEE;
+  padding:5px;
+  border-radius: 5px;
+}
+.profile-name{
+  color:#BF2328; 
+  margin-top: 15px;
+  font-size: 30px;
+}
+.send_btn{
+  margin-top:10px;
+  text-align:right;
+}
+.send_btn button{
+ margin-left: 5px;
+}
+.nav-tabs li.active a{
+  border-top:3px solid #F00;
+}
+.profile-data{
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding: 15px;
+}
+.profile-tab{
+  margin: 0px !important;
+}
+.profile-tab li a{
+  font-size: 18px;
+}
+.profile-img{
+  border:0px; 
+  margin-right:10px;
+}
+.section-title{
+  font-size: 16px;
+  color: #BF2328;
+}
+.similar-profile img{
+  max-width: 100%;
+  padding: 2px;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #CCC;
+}
+.similar-profile div{
+  padding: 5px;
+}
+.similar-profile{
+  border-bottom:1px solid #ddd;
+  border-left:1px solid #ddd;
+  border-right:1px solid #ddd;
+}
+.profile-name-detail{
+ line-height: 25px;
+  font-size: 20px;
+}
+.profile-container{
+  margin-top:30px;
+}
+.profile-row{
+  background:#FFFDE9;
+  border:1px solid #eee;
+}
+.search-profile .col4-img{
+   padding:15px;
+}
+.profile-row .created{
+ text-align: right;
+  padding: 15px;
+}
+.profile-row textarea{
+   padding:10px;
+   width:100%;
+   height: 100px;
+   background: #FDFCFC; 
+   border: 1px solid #4DC0B9;
+}
+.user-detail{
+  margin-bottom: 25px; 
+}
+.side-section{
+  margin-left:10px;
+}
+.side-section .align-center{
+ background:#7CB325; 
+ padding:8px; 
+ color:#fff; 
+ font-size:16px;
+}
+.side-section .similar-profile{
+  padding:10px 5px;
+}
+.tab-search{
+  border-radius: 0px;
+   border-top: 4px solid #45B6AF;
+}
+.profile-data .scroll{
+ border-right:1px solid #ddd; 
+ overflow: scroll; 
+ height: 450px;
+}
+.refine{
+  font-size:18px;
+}
+.profile-data .label-font{
+   font-size:16px;
+}
+ .center-align{
+  text-align: center;
+  text-decoration: none;
+}
+.center-align .go{
+  text-decoration: none; 
+  color: #523333;
+}
+.go .icon{
+  font-size: 8px; 
+}
+.border-style{
+  border-bottom-style: dotted;
+}
+.shortby{
+  max-width: 100px; 
+  padding-top: 3px;
+}
+.search-profile{
+  background-color:#ddd;
+   margin-top:10px; 
+   border:1px solid #ddd;
+}
+.margintop{
+  margin-top:0px;
+}
+.col6-padding{
+ padding-right:0px;
+}
+.text-decor{
+  text-decoration: none !important;
+}
+
+.main{
+  background: #f8f8f8;
+}
+.hr-margin{
+  margin: 10px 0px;
+}
+.pro-bar{
+  margin-bottom: 10px;
+}
+.colmd4{
+  border-right:1px solid #ddd;
+}
+.colmd4-row{
+  background: #fff; 
+  padding:15px;
+}
+.upload-button{
+  font-size: 15px;
+  font-weight: 700;
+  padding: 5px;
+  box-shadow: 0 4px #E3DD34;
+  background: #F5F05F;
+  border: 0px;
+}
+.margin-top{
+  margin-top: 20px !important;
+}
+.padding-top-row{
+  padding: 0px 15px 0px 15px !important;
+}
+.fullpadding{
+  padding: 0px !important;
+}
+.barwidth{
+   width:70%;
+}
+.paddingtop{
+  padding-top:0px !important;
+}
+.border-tab{
+  border: 1px solid #C9CFCE !important;
+   border-right:0px !important;
+}
+.full-border{
+border: 1px solid #C9CFCE !important;
+}
+.icon-plus{
+  color:#45B6AF; 
+  margin-right:10px;
+}
+.nav-menu{
+  color:#fff;
+  padding: 10px;
+  text-decoration: none !important;
+}
+.save_search{
+  float: right;
+  margin-top: 5px;
+}
+.save_search button{
+  margin-left: 10px;
+}
+.page-login{
+ background:rgba(255, 253, 253, 0.9); 
+ padding:50px; 
+ margin:50px 0 55px 0;
+}
+.page-login .form-title{
+  background-color:#45B6AF;
+  color:#fff;
+  padding:15px;
+  text-align:center;
+  margin-top: 0px;
+}
+.page-login .demo-loading-btn{
+ font-size: large;
+ padding: 10px;
+ background-color: rgba(75, 141, 248, 0.84); 
+}
